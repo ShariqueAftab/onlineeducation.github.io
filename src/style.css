@@ -1,0 +1,456 @@
+*{
+    font-family: 'Roboto',sans-serif;
+    text-transform: capitalize;
+    text-decoration: none;
+    outline: none;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+.heading{
+    font-size: 4rem;
+    padding: 0rem 1rem;
+    padding-top: 6rem;
+    text-align: center;
+    letter-spacing: .2rem;
+    color:violet
+}
+.title{
+    font-size: 1.7rem;
+    text-align: center;
+    color: gray;
+}
+header{
+    width: 96%;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 2rem; left: 50%;
+    transform: translate(-50%);
+    border-radius: 5rem;
+    align-items: center;
+    padding: 1rem 2rem;
+    z-index: 1000;
+    transition: 0.2s;
+}
+.header-active{
+    top: 0;
+    width: 100%;
+    border-radius: 0;
+    box-shadow: 0 .1rem .3rem rgb(228, 120, 138);
+}
+header .navbar ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+}
+header .navbar ul li{
+    margin: 0 1rem;
+}
+header .navbar ul li a{
+    font-size: 2rem;
+    color: rgb(228, 120, 138);
+}
+header .navbar ul li .active,
+header .navbar ul li a:hover{
+    color: violet;
+}
+header .logo{
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+header .logo i{
+    color: violet;
+    padding: 0 .2rem;
+}
+header .fa-bars{
+    font-size: 3rem;
+    color: violet;
+    cursor: pointer;
+    display: none;
+    transition: .2s;
+}
+header .fa-times{
+    transform: rotate(180deg);
+    color: violet;
+}
+
+/* home style start  */
+.home{
+    background-image: url(../public/edubg.avif);
+    width: 100%;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.home .content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    padding-top: 14rem;
+    padding-bottom: 8rem;
+    text-align: center;
+}
+.home .content h1{
+    font-size: 5rem;
+    color: #fff;
+    padding: 0 1rem;
+    text-transform: uppercase;
+}
+.home .content p{
+    font-size: 2rem;
+    color: #eee;
+    padding: 1rem 25rem;
+}
+.home .content button{
+    height: 4rem;
+    width: 20rem;
+    border-radius: 2.5rem;
+    background: pink;
+    font-size: 2rem;
+    cursor: pointer;
+    border: none;
+    box-shadow: 1px 2px 2px gray;
+}
+.home .content button:hover{
+    letter-spacing: .2rem;
+}
+.home .box-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.home .box-container .box{
+    height:20rem;
+    width: 25rem;
+    background: #fff;
+    text-align: center;
+    border-radius: 1rem;
+    box-shadow: 2px 3px 2px gray;
+    margin: 2rem;
+    cursor: pointer;
+}
+.home .box-container .box i{
+    height: 6rem;
+    width: 6rem;
+    line-height: 6rem;
+    text-align: center;
+    border-radius: 50%;
+    color: #fff;
+    background: violet;
+    font-size: 2rem;
+    margin: 1rem 0;
+
+}
+
+.home .box-container .box h3{
+    font-size: 2.2rem;
+    color: violet;
+}
+.home .box-container .box p{
+    font-size: 1.7rem;
+    padding: .7rem 2rem;
+    color: #666;
+}
+/* about section style  */
+.about .row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about .row .image img{
+    height: 65vh;
+    width: 40vw;
+    margin-left: 8rem;
+}
+.about .row .content{
+    padding-left: 5rem;
+    width: 48%;
+
+}
+.about .row .content h3{
+    font-size: 3rem;
+    color: violet;
+}
+.about .row .content p{
+    font-size: 1.6rem;
+    color: gray;
+    padding: 1rem 0;
+}
+.about .row .content button{
+    height: 3.5rem;
+    width: 17rem;
+    border-radius: 3rem;
+    background: blue;
+    color: #fff;
+    font-size: 2rem;
+    border: none;
+    box-shadow: 2px 5px 3px gray;
+}
+.about .row .content button:hover{
+    letter-spacing: .2rem;
+}
+/* teacher section style  */
+.teacher{
+    background: cornsilk;
+}
+.teacher .card-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+}
+.teacher .card-container .card{
+    padding: 2rem;
+    background: #fff;
+    margin: 2rem;
+    text-align: center;
+    width: 30rem;
+    height: 40rem;
+    box-shadow: .4rem .6rem .5rem gray;
+    transition: 0.2s;
+    cursor: pointer;
+    border-radius: 1.2rem;
+}
+.teacher .card-container .card:hover{
+    background: black;
+    color: #fff;
+}
+.teacher .card-container .card img{
+    width: 100%;
+    object-fit: cover;
+    height: 25rem;
+}
+.teacher .card-container .card h3{
+    font-size: 3rem;
+    margin-top: 1.5rem;
+}
+.teacher .card-container .card p{
+    font-size: 1.6rem;
+    color: gray;
+    margin: 1.1rem 0;
+}
+.teacher .card-container .card .icons{
+    font-size: 2.5rem;
+
+}
+/* course section style  */
+.courses .box-container{
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    padding-top: 4rem;
+    flex-wrap: wrap;
+}
+.courses .box-container .box{
+    height: 18rem;
+    width: 25rem;
+    margin: 3.5rem 2rem;
+    text-align: center;
+    border-radius: .5rem;
+    box-shadow: 2px 3px 2px gray;
+}
+.courses .box-container .box i{
+    height: 6rem;
+    width: 6rem;
+    line-height: 6rem;
+    text-align: center;
+    border-radius: 50%;
+    background: violet;
+    font-size: 3rem;
+    margin: 1rem 0;
+}
+.courses .box-container .box h3{
+    font-size: 2.5rem;
+}
+.courses .box-container .box p{
+    font-size: 1.2rem;
+    margin: 1.2rem 0;
+}
+/* review section style  */
+.review{
+    background:cornsilk ;
+}
+.review .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+}
+.review .box-container .box img{
+    width: 6rem;
+    height: 6rem;
+}
+.review .box-container .box{
+    padding: 2rem;
+    background: #fff;
+    margin: 2rem;
+    text-align: center;
+    width: 30rem;
+    height: 20rem;
+    box-shadow: .4rem .6rem .5rem gray;
+    border: 2px solid black;
+    transition: 0.2s;
+    cursor: pointer;
+    border-radius: 1.2rem;
+}
+.review .box-container .box h3{
+    font-size: 2rem;
+    padding: 0.5rem;
+}
+.review .box-container .box p{
+    font-size: 1.4rem;
+}
+/* contact section style  */
+.contact{
+    background: lightgray;
+}
+.contact .row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem 0;
+}
+.contact .row .image img{
+    width: 30vw;
+    height: 35vw;
+}
+.contact .row .form-container{
+    width: 50%;
+    padding-right: 6rem;
+}
+.contact .row .form-container input, textarea{
+    height: 4rem;
+    width: 100%;
+    background: #fff;
+    border: none;
+    border-radius: 5rem;
+    padding: 0 1rem;
+    margin: 1rem 0;
+    color: violet;
+    font-size: 1.7rem;
+    transition: .2s linear;
+}
+.contact .row .form-container textarea{
+    height: 20rem;
+    border-radius: 1rem;
+    padding: 1rem;
+    resize: none;
+}
+.contact .row .form-container .btn{
+    width: 17rem;
+    background: violet;
+    color: #fff;
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+/* footer section style  */
+footer .footer-container{
+    background: black;
+    padding: 4rem 5rem;
+    color: #fff;
+    text-align: center;
+}
+footer .footer-container .footer-headline{
+    font-size: 3.5rem;
+    margin: 1.7rem 0;
+}
+footer .footer-container .footer-links{
+    font-size: 2rem;
+    
+    
+}
+footer .footer-container .footer-links span{
+    margin: 0 1.2rem;
+
+}
+footer .footer-container .footer-links span a{
+    color: gray;
+}
+footer .footer-container .social-links{
+    font-size: 3.3rem;
+    padding: 2rem;
+    color: blue;
+}
+footer .footer-copyright{
+    font-size: 2.5rem;
+    text-align: center;
+    background: gray;
+}
+
+/* media queries  */
+@media (max-width:768px){
+    html{
+        font-size: 55%;
+    }
+    header .fa-bars{
+        display: block;
+    }
+    header .navbar{
+        position: fixed;
+        top: -100rem;
+        left: 0;
+        background: #fff;
+        border-radius: 1rem;
+        width: 100%;
+        opacity: 0;
+    }
+    header .navbar ul{
+        flex-flow: column;
+        padding: 2rem 0;
+    }
+    header .navbar ul li{
+        margin: 1rem 0;
+        width: 100%;
+        text-align: center;
+    }
+    header .navbar ul li a{
+        font-size: 3rem;
+        
+    }
+    header .nav-toggle{
+        top: 5.7rem;
+        opacity: 1;
+    }
+    .home .content p{
+        padding: 1.5rem 2rem;
+    }
+    .about .row{
+        flex-flow: column-reverse;
+    }
+    .about .row .content{
+        padding: 0 2rem;
+        width: 100%;
+        margin-top: 5rem;
+    }
+    .about .row .image img{
+        height: 60vh;
+        width: 90vw;
+    }
+    .contact .row{
+        display: flex;
+        flex-direction: column;
+    }
+    .contact .row .image img{
+        width: 50vw;
+        height: 60vw;
+    }
+    .contact .row .form-container{
+        width: 100%;
+        padding-left: 6rem;
+    }
+
+
+}
